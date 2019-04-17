@@ -48,7 +48,25 @@ While showing the results to the user, the bot should display the top 5 restaura
 
 Finally, the bot should ask the user whether he/she wants the details of the top 10 restaurants on email. If the user replies 'yes', the bot should ask for user’s email id and then send it over email. Else, just reply with a 'goodbye' message.
 
+### Building ChatBot using RASA
 
+We are going to use an open source framework for building conversational bots  - RASA.
+
+RASA - An open source Conversational AI is a set of machine learning tools for developers to create contextual text and voice-based chatbots and assistants.
+
+Apple’s Siri, Amazon’s Alexa etc. are much more than a 'speech-based search engine'. Apart from searching for information (e.g. from Wikipedia, YouTube, Google etc.), they can 'talk' to us in natural language. 
+
+Conversation, or dialogue, is a very fundamental aspect of human language, and arguably the most interesting challenge in building truly intelligent NLP systems. A step towards building such systems is domain specific, text-based chatbots used by organisations for tasks such as booking hotels, retrieving stock market information, resolving customer queries etc.
+
+Any conversational system has primarily two components -
+ - Natural Language Understanding, or NLU
+ - A Dialogue Management System which carries out the overall conversation.
+ 
+In Rasa, these two components are named Rasa NLU and Rasa Core respectively.
+
+Rasa NLU is the tool used for intent classification and entity extraction.
+
+Rasa Core, the dialogue management layer of Rasa, takes structured input in the form of intents and entities (i.e. the output of Rasa NLU) and decides the next actions.
 
 
 
