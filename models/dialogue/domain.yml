@@ -1,0 +1,103 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_email_id_ask
+- utter_email_conf
+- utter_email_sent
+- utter_budget_error
+- utter_cuisine_error
+- utter_no_results_found
+- action_restaurant
+- action_sendemail
+- action_chklocation
+actions:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_email_id_ask
+- utter_email_conf
+- utter_email_sent
+- utter_budget_error
+- utter_cuisine_error
+- utter_no_results_found
+- actions.ActionSearchRestaurants
+- actions.ActionSendEmail
+- actions.ActionCheckLocation
+config:
+  store_entities_as_slots: true
+entities:
+- location
+- cuisine
+- price
+- email
+intents:
+- greet
+- affirm
+- deny
+- goodbye
+- thankyou
+- restaurant_search
+- email_confirmation
+slots:
+  cuisine:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  email:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  emailbody:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  price:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_budget:
+  - text: "What price range are you looking at?\n- Lesser than Rs. 300\n- Rs. 300\
+      \ to 700\n- More than 700\n"
+  utter_ask_cuisine:
+  - text: "What kind of cuisine would you prefer?\n- Chinese\n- Mexican\n- Italian\n\
+      - American\n- South Indian\n- North Indian\n"
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  utter_budget_error:
+  - text: Sorry, I couldn't get you. Please choose one of the budget options from
+      the above mentioned options.
+  utter_cuisine_error:
+  - text: Sorry, I couldn't get you. Please choose one of the cuisine options from
+      the above mentioned options.
+  utter_default:
+  - text: Sorry, I couldn't get you.
+  utter_email_conf:
+  - text: Should I send you details of all the restaurants on email?
+  utter_email_id_ask:
+  - text: To what email id should I send it to?
+  utter_email_sent:
+  - text: Sent. Bon Appetit!
+  - text: Sent.
+  utter_goodbye:
+  - text: Okay. Bon Appetit!
+  - text: Bye-bye
+  utter_greet:
+  - text: hey Foodie! How may I help you
+  - text: Hi Foodie, How can I help you today!
+  - text: Hey Foodie, How is it going. How May I help you Today
+  - text: Hi there! How may I help you?
+  utter_no_results_found:
+  - text: Sorry, No results found for your criteria. Would you like to search for
+      some other restaurants?
