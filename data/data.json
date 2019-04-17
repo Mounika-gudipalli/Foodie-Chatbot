@@ -1,0 +1,5783 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{6}"
+      },
+      {
+        "name": "low",
+        "pattern": "^<[0-9]{2,3}$"
+      },
+      {
+        "name": "medium",
+        "pattern": "^[0-9]{3}-[0-9]{3}$"
+      },
+      {
+        "name": "high",
+        "pattern": "^>[0-9]{3}$"
+      },
+      {
+        "name": "greet_hey",
+        "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "email",
+        "pattern": "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+      },
+      {
+        "name": "greet_hi",
+        "pattern": "hi[^\\s]*"
+      },
+      {
+        "name": "greet_hello",
+        "pattern": "hello[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "low",
+        "synonyms": [
+          "lower",
+          "cheap",
+          "cheaper",
+          "<300",
+          "<300 ",
+          "inexpensive",
+          "less than 300",
+          "cost under 300",
+          "Lesser than Rs. 300",
+          "Lesser than Rs.300",
+          "lesser than Rs. 300",
+          "lesser than Rs.300",
+          "Lesserthan Rs. 300",
+          "lesserthan Rs. 300",
+          "lesserthan Rs.300",
+          "Lesserthan Rs.300",
+          "Less than Rs. 300",
+          "Less than Rs.300",
+          "less than Rs. 300",
+          "less than Rs.300",
+          "Lessthan Rs. 300",
+          "lessthan Rs. 300",
+          "lessthan Rs.300",
+          "Lessthan Rs.300",
+          "Lesser than 300",
+          "lesser than 300",
+          "Lesserthan 300",
+          "lesserthan 300",
+          "Less than 300",
+          "less than 300",
+          "lessthan 300",
+          "Lessthan 300"
+        ]
+      },
+      {
+        "value": "medium",
+        "synonyms": [
+          "moderately",
+          "moderate",
+          "mid",
+          "in range of 300 to 700",
+          "300 to 700",
+          "300-700",
+          "Rs. 300 to 700",
+          "Rs.300 to 700",
+          "in range of 300 to 700 ",
+          "300 to 700 ",
+          "300-700 ",
+          "Rs. 300 to 700 ",
+          "Rs.300 to 700 "
+        ]
+      },
+      {
+        "value": "high",
+        "synonyms": [
+          "expensive",
+          "costly",
+          "More than 700",
+          ">700",
+          ">700 ",
+          "greater than 700",
+          "700 or more",
+          "luxury",
+          "luxurious",
+          "More than 700",
+          "More than Rs.700",
+          "More than Rs. 700",
+          "more than 700",
+          "more than Rs.700",
+          "more than Rs. 700",
+          "Morethan 700",
+          "Morethan Rs.700",
+          "Morethan Rs. 700",
+          "morethan 700",
+          "morethan Rs.700",
+          "morethan Rs. 700"
+        ]
+      },
+      {
+        "value": "chinese",
+        "synonyms": [
+          "chines"
+        ]
+      },
+      {
+        "value": "Mexican",
+        "synonyms": [
+          "mexica",
+          "taco",
+          "mex",
+          "spanish"
+        ]
+      },
+      {
+        "value": "American",
+        "synonyms": [
+          "american",
+          "america"
+        ]
+      },
+      {
+        "value": "Italian",
+        "synonyms": [
+          "italic",
+          "italia"
+        ]
+      },
+      {
+        "value": "North Indian",
+        "synonyms": [
+          "northindian",
+          "NorthIndian",
+          "north food",
+          "northie",
+          "indian",
+          "india",
+          "punjabi",
+          "punjab",
+          "gujarati",
+          "gujarat",
+          "bengali",
+          "bengal",
+          "kashmiri",
+          "kashmir"
+        ]
+      },
+      {
+        "value": "South Indian",
+        "synonyms": [
+          "SouthIndian",
+          "southindian",
+          "south food",
+          "southie",
+          "indian",
+          "india",
+          "andhra",
+          "telugu",
+          "kerala",
+          "karnataka",
+          "tamil"
+        ]
+      },
+      {
+        "value": "Bangalore",
+        "synonyms": [
+          "bengaluru",
+          "blore",
+          "blr"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "bombay"
+        ]
+      },
+      {
+        "value": "Hyderabad",
+        "synonyms": [
+          "secunderabad",
+          "hydrabad"
+        ]
+      },
+      {
+        "value": "Kolkata",
+        "synonyms": [
+          "calcutta"
+        ]
+      },
+      {
+        "value": "New Delhi",
+        "synonyms": [
+          "newdelhi",
+          "delhi"
+        ]
+      },
+      {
+        "value": "Ahmedabad",
+        "synonyms": [
+          "Amdavad",
+          "Ahmadabad"
+        ]
+      },
+      {
+        "value": "Chennai",
+        "synonyms": [
+          "Madras"
+        ]
+      },
+      {
+        "value": "Pune",
+        "synonyms": [
+          "Poona"
+        ]
+      },
+      {
+        "value": "Ajmer",
+        "synonyms": [
+          "Ajmr"
+        ]
+      },
+      {
+        "value": "Amravati",
+        "synonyms": [
+          "Amaravati"
+        ]
+      },
+      {
+        "value": "Aligarh",
+        "synonyms": [
+          "Allygurh & Koil",
+          "Koil",
+          "Allygurh",
+          "Algarh"
+        ]
+      },
+      {
+        "value": "Amritsar",
+        "synonyms": [
+          "Ambarsar"
+        ]
+      },
+      {
+        "value": "Aurangabad",
+        "synonyms": [
+          "Aurangbad"
+        ]
+      },
+      {
+        "value": "Bareilly",
+        "synonyms": [
+          "Bareilli",
+          "Bareily",
+          "Bareili"
+        ]
+      },
+      {
+        "value": "Bhopal",
+        "synonyms": [
+          "Bopal"
+        ]
+      },
+      {
+        "value": "Belgaum",
+        "synonyms": [
+          "Belgam",
+          "Belagavi",
+          "Belgavi",
+          "Belgavy",
+          "Belagavy",
+          "Venugrama",
+          "bamboo village"
+        ]
+      },
+      {
+        "value": "Bhubaneswar",
+        "synonyms": [
+          "Bhuvaneswar",
+          "Bhubaneswara"
+        ]
+      },
+      {
+        "value": "Coimbatore",
+        "synonyms": [
+          "Kovai"
+        ]
+      },
+      {
+        "value": "Dehradun",
+        "synonyms": [
+          "Dehra dun",
+          "Dehra"
+        ]
+      },
+      {
+        "value": "Bhilai",
+        "synonyms": [
+          "Bhilai Nagar",
+          "Bilai",
+          "Bilai Nagar",
+          "bilainagar",
+          "bhilainagar"
+        ]
+      },
+      {
+        "value": "Gulbarga",
+        "synonyms": [
+          "Kalaburagi"
+        ]
+      },
+      {
+        "value": "Gurgaon",
+        "synonyms": [
+          "Gurugram",
+          "Gurgao"
+        ]
+      },
+      {
+        "value": "Guwahati",
+        "synonyms": [
+          "Gauhati"
+        ]
+      },
+      {
+        "value": "Hubli",
+        "synonyms": [
+          "Hubballi",
+          "Dharwad"
+        ]
+      },
+      {
+        "value": "Hubli",
+        "synonyms": [
+          "Hubballi",
+          "Dharwad",
+          "Hubli–Dharwad",
+          "Hubballi–Dharwad"
+        ]
+      },
+      {
+        "value": "Jabalpur",
+        "synonyms": [
+          "Jubbulpore"
+        ]
+      },
+      {
+        "value": "Jalandhar",
+        "synonyms": [
+          "Jalandar",
+          "Jullundur"
+        ]
+      },
+      {
+        "value": "Kannur",
+        "synonyms": [
+          "Cannanore"
+        ]
+      },
+      {
+        "value": "Kanpur",
+        "synonyms": [
+          "Cawnpore"
+        ]
+      },
+      {
+        "value": "Kochi",
+        "synonyms": [
+          "Cochin",
+          "Ernakulam"
+        ]
+      },
+      {
+        "value": "Kakinada",
+        "synonyms": [
+          "Cocanada"
+        ]
+      },
+      {
+        "value": "Kollam",
+        "synonyms": [
+          "Quilon",
+          "Desinganadu"
+        ]
+      },
+      {
+        "value": "Kota",
+        "synonyms": [
+          "Kotah"
+        ]
+      },
+      {
+        "value": "Kozhikode",
+        "synonyms": [
+          "Calicut"
+        ]
+      },
+      {
+        "value": "Malappuram",
+        "synonyms": [
+          "Malapuram"
+        ]
+      },
+      {
+        "value": "Mangalore",
+        "synonyms": [
+          "Mangaluru"
+        ]
+      },
+      {
+        "value": "Mysore",
+        "synonyms": [
+          "Mysuru"
+        ]
+      },
+      {
+        "value": "Nashik",
+        "synonyms": [
+          "Nasik"
+        ]
+      },
+      {
+        "value": "Palakkad",
+        "synonyms": [
+          "Palghat"
+        ]
+      },
+      {
+        "value": "Pondicherry",
+        "synonyms": [
+          "Puducherry"
+        ]
+      },
+      {
+        "value": "Prayagraj",
+        "synonyms": [
+          "Allahabad",
+          "Illahabad",
+          "Prayag"
+        ]
+      },
+      {
+        "value": "Visakhapatnam",
+        "synonyms": [
+          "Vizag",
+          "Waltair",
+          "Vizagapatam"
+        ]
+      },
+      {
+        "value": "Rajahmundry",
+        "synonyms": [
+          "Rajamahendravaram"
+        ]
+      },
+      {
+        "value": "Rourkela",
+        "synonyms": [
+          "Ispat Nagar",
+          "IspatNagar"
+        ]
+      },
+      {
+        "value": "Thiruvananthapuram",
+        "synonyms": [
+          "Trivandrum"
+        ]
+      },
+      {
+        "value": "Thrissur",
+        "synonyms": [
+          "Thiru Siva Peroor",
+          "Trichur",
+          "ThiruSiva Peroor",
+          "ThiruSivaPeroor",
+          "Thiru SivaPeroor",
+          "Thrishivaperoor"
+        ]
+      },
+      {
+        "value": "Tiruchirappalli",
+        "synonyms": [
+          "Trichinopoly",
+          "Trichy"
+        ]
+      },
+      {
+        "value": "Tirunelveli",
+        "synonyms": [
+          "Nellai",
+          "Tinnevelly"
+        ]
+      },
+      {
+        "value": "Tiruppur",
+        "synonyms": [
+          "Tirupur"
+        ]
+      },
+      {
+        "value": "Ujjain",
+        "synonyms": [
+          "Ujjayini",
+          "Avanti",
+          "Avantika",
+          "Avantikapuri"
+        ]
+      },
+      {
+        "value": "Vadodara",
+        "synonyms": [
+          "Baroda"
+        ]
+      },
+      {
+        "value": "Varanasi",
+        "synonyms": [
+          "Benares",
+          "Banaras",
+          "Kashi"
+        ]
+      },
+      {
+        "value": "Bijapur",
+        "synonyms": [
+          "Vijayapura",
+          "Vijaypura"
+        ]
+      },
+      {
+        "value": "Vijayawada",
+        "synonyms": [
+          "Vijayavatika",
+          "Bezawada"
+        ]
+      },
+      {
+        "value": "Vasai-Virar City",
+        "synonyms": [
+          "Vasai-Virar",
+          "VasaiVirar",
+          "Vasai Virar",
+          "Vasai-VirarCity",
+          "VasaiVirar City",
+          "VasaiVirarCity",
+          "Vasai VirarCity",
+          "Vasai Virar City"
+        ]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 65,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in varanasi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "varanasi",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "american",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 65,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry  looking out for some good north indian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 70,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 75,
+            "value": "hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry  looking out for some good north indian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 70,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 75,
+            "value": "hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 65,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry  looking out for some good north indian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 70,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 75,
+            "value": "hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry  looking out for some good north indian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 70,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 75,
+            "value": "hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 47,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hola",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hola",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yep",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place to eat",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I want to grab lunch",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I am searching for a dinner spot",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place in the north of town",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me chines restaurants in the north",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me a mexican place in the centre",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "centre",
+            "entity": "location"
+          },
+          {
+            "start": 10,
+            "end": 17,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for an indian spot called olaolaolaolaolaola",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "search for restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in the west",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "west",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "anywhere near 18328",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "18328",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for asian fusion food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 29,
+            "value": "asian fusion",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I am looking a restaurant in 29432",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "29432",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in London",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "London",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "South Indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "South Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "North Indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "North Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Bangalore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Oh, sorry, in Italy",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "Italy",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "In Delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "In Delhi.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for some restaurants in Delhi.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for some restaurants in Delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for some restaurants in delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for mexican indian fusion",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 38,
+            "value": "mexican indian fusion",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "can you book a table in agra in a moderate price range with chinese food for four people",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 24,
+            "end": 29,
+            "value": "agra",
+            "entity": "location"
+          },
+          {
+            "start": 34,
+            "end": 43,
+            "value": "moderate",
+            "entity": "price"
+          },
+          {
+            "start": 60,
+            "end": 68,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "central indian restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 14,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "end",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "please help me to find restaurants in pune",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 42,
+            "value": "pune",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "American",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "low",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "medium",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "high",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "high",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Should I send you details of all the restaurants on email?",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "abc@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "abc@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "show me expensive restaurants in mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "find low budget chinese restaurants in chennai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 8,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 16,
+            "end": 23,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 39,
+            "end": 46,
+            "value": "chennai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me moderately priced restaurants in delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 19,
+            "value": "moderately",
+            "entity": "price"
+          },
+          {
+            "start": 41,
+            "end": 46,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "please help me to find medium budget restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "my email id is abcd@yahoo.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 15,
+            "end": 29,
+            "value": "abcd@yahoo.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "email id : bbc@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 11,
+            "end": 24,
+            "value": "bbc@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "email id is red@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 12,
+            "end": 25,
+            "value": "red@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "can you suggest low budget mexican restaurant in madras",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 16,
+            "end": 20,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 49,
+            "end": 55,
+            "value": "madras",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "please show some cheap restaurants in goa",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 38,
+            "end": 41,
+            "value": "goa",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for lower price restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "lower",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "please show some cheap restaurants in mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "please show some cheap restaurants in delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 38,
+            "end": 43,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "some cheap",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "cheap",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "some low cost",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "some low priced",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Please show low cost restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "suggest some low priced restaurants in bengaluru",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 39,
+            "end": 48,
+            "value": "bengaluru",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to know low priced mexican cuisine restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 26,
+            "end": 33,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "low priced",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "low budget",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "low cost",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "bengaluru",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bengaluru",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "goa",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "goa",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "Looking out for some good restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I’ll prefer Chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "Chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’ll prefer mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’ll prefer chinese.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I will prefer American",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’ll prefer Italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I will prefer south indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 26,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I will go with Mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "chines",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "chines",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "South indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "South indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "<300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "<300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "cheaper",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "cheaper",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "in range of 300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 22,
+            "value": "in range of 300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Rs. 300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Rs. 300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show me low budget chinese restaurants in Agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me medium budget italian restaurants in Allahabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "medium",
+            "entity": "price"
+          },
+          {
+            "start": 22,
+            "end": 30,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 45,
+            "end": 54,
+            "value": "Allahabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me costly north indian restaurants in Hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "costly",
+            "entity": "price"
+          },
+          {
+            "start": 15,
+            "end": 27,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 43,
+            "end": 52,
+            "value": "Hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "find expensive restaurants in varanasi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 15,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 30,
+            "end": 38,
+            "value": "varanasi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "find costly restaurants in bijapur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "costly",
+            "entity": "price"
+          },
+          {
+            "start": 27,
+            "end": 34,
+            "value": "bijapur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "find medium cost south indian restaurants in cuttack",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "medium",
+            "entity": "price"
+          },
+          {
+            "start": 17,
+            "end": 29,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 45,
+            "end": 52,
+            "value": "cuttack",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Jodhpur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Jodhpur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Kannur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Kannur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "kanpur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "kanpur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bikaner",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Bikaner",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Mathura",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mathura",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Malappuram",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Malappuram",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Madurai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Madurai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "bengaluru",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bengaluru",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Okay. Show me some in Allahabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "Allahabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Okay. Show me some in Agra.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 22,
+            "end": 26,
+            "value": "Agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Okay. Show me some in Solapur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "Solapur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Okay. Show me some in Jamnagar.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "Jamnagar",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "300-700 range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "300-700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "400-600 range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "400-600",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "500-700 range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "500-700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "500-600 range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "500-600",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "yes. Please send it to ahbcdj@dkj.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 23,
+            "end": 37,
+            "value": "ahbcdj@dkj.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "Can you suggest some good restaurants in Ranchi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 41,
+            "end": 47,
+            "value": "Ranchi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can you suggest some good restaurants in Vasai-Virar City",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 41,
+            "end": 57,
+            "value": "Vasai-Virar City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Can you suggest some good restaurants in Salem",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 41,
+            "end": 46,
+            "value": "Salem",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": ">700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": ">700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": ">800",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": ">800",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": ">900",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": ">900",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": ">1000",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": ">1000",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "northindian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "northindian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "southindian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "southindian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "north indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "south indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "american",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "yes. Please",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in hyderabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 70,
+            "value": "hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in Jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in dhanbad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 73,
+            "value": "dhanbad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 47,
+            "value": "american",
+            "entity": "cuisine"
+          },
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in Ahmedabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 70,
+            "value": "Ahmedabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "jddk.2jmd@kdl.co.in",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "jddk.2jmd@kdl.co.in",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abcde.h75@yahoo.co.in",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "abcde.h75@yahoo.co.in",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abcde_h75@yahoo.co.in",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "abcde_h75@yahoo.co.in",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abcde.h75@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "abcde.h75@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abcde_h75@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "abcde_h75@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "xyz@sth.edu",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "xyz@sth.edu",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "xyz.abc@sth.edu",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "xyz.abc@sth.edu",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abc.def@rediffmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 22,
+            "value": "abc.def@rediffmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "abc_def@rediffmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 22,
+            "value": "abc_def@rediffmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in goa",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 64,
+            "value": "goa",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in Chennai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 73,
+            "value": "Chennai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 67,
+            "value": "jaipur",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 66,
+            "end": 71,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in bijapur",
+        "intent": "",
+        "entities": [
+          {
+            "start": 38,
+            "end": 47,
+            "value": "american",
+            "entity": "cuisine"
+          },
+          {
+            "start": 62,
+            "end": 69,
+            "value": "bijapur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "mou.g86@gmail.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "mou.g86@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "show me some restaurants in mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 34,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me some restaurants in allahabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "allahabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me some mexican restaurants in ahmedabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 36,
+            "end": 45,
+            "value": "ahmedabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 67,
+            "value": "jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me restaurants in bangalore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 32,
+            "value": "bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me restaurants in mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "bangalore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "medium",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "expensive",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "high",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "high",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "medium budget",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for medium price restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show medium budget restaurants in mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "medium",
+            "entity": "price"
+          },
+          {
+            "start": 34,
+            "end": 40,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "medium",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "medium price",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show medium priced restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show medium budget restaurants in chennai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "medium",
+            "entity": "price"
+          },
+          {
+            "start": 34,
+            "end": 41,
+            "value": "chennai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "medium",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "medium budget",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "medium",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "high budget",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "high",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "high price",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "high",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "high",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "high",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "hii",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hiii",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good afternoon",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good noon",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "sure",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "hmm",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "hm",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "hmmm",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "hm.",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "hm..",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "searching a place to eat",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "Am hungry",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I am hungry",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "show me what you can do",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a place in the north of town.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to grab breakfast",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I want to grab lunch",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I want to grab bf",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "I am looking for a place in south of town",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me mexican restaurant",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "mexican food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me mexican places for food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I want to eat mexican food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "mexican food in north",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 16,
+            "end": 21,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "show me north indian restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "north indian food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me north indian restaurant in low budget",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 35,
+            "end": 38,
+            "value": "low",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "show me mexican place at low price and send me details at upgrad@gmail.com",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "value": "low",
+            "entity": "price"
+          },
+          {
+            "start": 58,
+            "end": 74,
+            "value": "upgrad@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "show me mexican restaurant in central for high budget and send me email at a@yahoo.com",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 75,
+            "end": 86,
+            "value": "a@yahoo.com",
+            "entity": "email"
+          },
+          {
+            "start": 41,
+            "end": 46,
+            "value": " high",
+            "entity": "price"
+          },
+          {
+            "start": 30,
+            "end": 37,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "hello I want north indian restaurant in less than 300 rs in JP nagar",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 25,
+            "value": "north indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 13,
+            "end": 25,
+            "value": "north indian",
+            "entity": "price"
+          },
+          {
+            "start": 60,
+            "end": 68,
+            "value": "JP nagar",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "hello I want south indian restaurant in less than 300 rs in JP nagar",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 25,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 40,
+            "end": 56,
+            "value": "less than 300 rs",
+            "entity": "price"
+          },
+          {
+            "start": 60,
+            "end": 68,
+            "value": "JP nagar",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "hello I want mexican restaurant in less than 300 rs in JP nagar",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 35,
+            "end": 51,
+            "value": "less than 300 rs",
+            "entity": "price"
+          },
+          {
+            "start": 55,
+            "end": 63,
+            "value": "JP nagar",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to know what mexican restaurants are available in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 57,
+            "end": 61,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to know what mexican restaurants are available in chennai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 57,
+            "end": 64,
+            "value": "chennai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to know what chinese restaurants are available in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 57,
+            "end": 61,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want to know what italian restaurants are available in jaipur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 57,
+            "end": 63,
+            "value": "jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "bangalore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "400",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "400",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "No",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "No. Thanks.",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Not now",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Not required",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Not sure",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "not sure now",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no need",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "sometime later",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "not now. sometime later",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no please",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no pls",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Okay. show me some chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some american",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "yes. find italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "yes. find me some north indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 18,
+            "end": 30,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me some south indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 25,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Hello!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hey!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hi!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hello there!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hey there !",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "abc.d@upgrad.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "abc.d@upgrad.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "xyz@upgrad.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "xyz@upgrad.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "kes.t@upgrad.com",
+        "intent": "email_confirmation",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "kes.t@upgrad.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "Rs.300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "Rs.300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Rs. 300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Rs. 300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Rs.300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "Rs.300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Rs. 300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "Rs. 300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Rs.300 to 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "Rs.300 to 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some mexican restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some italian restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some mexican restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Okay. show me some italian restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in agra",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 38,
+            "end": 46,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 61,
+            "end": 65,
+            "value": "agra",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "More than 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "More than 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "More than Rs.700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "More than Rs.700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "More than Rs. 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "More than Rs. 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "more than 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "more than 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "more than Rs.700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "more than Rs.700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Lesser than Rs. 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "Lesser than Rs. 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Lesser than Rs.300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "Lesser than Rs.300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Less than Rs. 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Less than Rs. 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "lesser than Rs. 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "lesser than Rs. 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "lesser than Rs.300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "lesser than Rs.300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "lesser than 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "lesser than 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "less than 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "less than 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "less than 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "less than 300",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good mexican restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good italian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 61,
+            "end": 71,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good american restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 62,
+            "end": 72,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good south indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I’m hungry. Looking out for some good north indian restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 66,
+            "end": 76,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 38,
+            "end": 50,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "find me some good chinese restaurants in chandigarh",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 41,
+            "end": 51,
+            "value": "chandigarh",
+            "entity": "location"
+          },
+          {
+            "start": 18,
+            "end": 25,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "chinese restaurants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking out for some good chinese restuarants",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "hello!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hello!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hi!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "show me italian restaurants in the north in the range of higher than 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "italian ",
+            "entity": "cuisine"
+          },
+          {
+            "start": 35,
+            "end": 40,
+            "value": "north",
+            "entity": "location"
+          },
+          {
+            "start": 57,
+            "end": 72,
+            "value": "higher than 700",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "can you something in chinese between 200 to 400",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 37,
+            "end": 47,
+            "value": "200 to 400",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "suggest maxican expensive restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "maxican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 16,
+            "end": 25,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "suggest some cheaper north indian restaurant for 4 people",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "cheaper",
+            "entity": "price"
+          },
+          {
+            "start": 21,
+            "end": 33,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "any place for party in cheaper range",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "cheaper ",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "I wana part in expensive restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 24,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "tell some expensive restaurant in south",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 19,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "any good dancing pub near JP nagar which is cheaper as well",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "JP nagar",
+            "entity": "location"
+          },
+          {
+            "start": 44,
+            "end": 51,
+            "value": "cheaper",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Chinese restaurant suggest please",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "want to enjoy in chinese restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "show me chinese restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Hey foodies whats up",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Foodie, suggest me some south indian food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 24,
+            "end": 36,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Foodie, suggest me some north indian food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 24,
+            "end": 37,
+            "value": "north indian ",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "how about some good expensive mexican food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 37,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "how about some good expensive chinese food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 37,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 20,
+            "end": 29,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      }
+    ]
+  }
+}
