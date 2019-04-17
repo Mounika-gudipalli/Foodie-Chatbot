@@ -1,0 +1,88 @@
+slots:
+  location:
+    type: text
+  cuisine:
+    type: text
+  price:
+    type: text
+  email:
+    type: text
+  emailbody:
+    type: text
+    
+entities:
+- location
+- cuisine
+- price
+- email
+
+intents:
+ - greet
+ - affirm
+ - deny
+ - goodbye
+ - thankyou
+ - restaurant_search
+ - email_confirmation
+ 
+templates:
+  utter_greet:
+    - "hey Foodie! How may I help you"
+    - "Hi Foodie, How can I help you today!"
+    - "Hey Foodie, How is it going. How May I help you Today"
+    - "Hi there! How may I help you?"
+  utter_goodbye:
+    - "Okay. Bon Appetit!"
+    - "Bye-bye"
+  utter_default:
+    - "Sorry, I couldn't get you."
+  utter_ask_cuisine: 
+    - text: |
+        What kind of cuisine would you prefer?
+        - Chinese
+        - Mexican
+        - Italian
+        - American
+        - South Indian
+        - North Indian
+  utter_ask_budget: 
+    - text: |
+        What price range are you looking at?
+        - Lesser than Rs. 300
+        - Rs. 300 to 700
+        - More than 700
+  utter_ask_howcanhelp:
+    - "how can I help you?"
+  utter_ask_location:
+    - "In what location?"
+  utter_email_conf:
+    - "Should I send you details of all the restaurants on email?"
+  utter_email_id_ask:
+    - "To what email id should I send it to?"
+  utter_email_sent:
+    - "Sent. Bon Appetit!"
+    - "Sent."
+  utter_budget_error:
+    - "Sorry, I couldn't get you. Please choose one of the budget options from the above mentioned options."
+  utter_cuisine_error:
+    - "Sorry, I couldn't get you. Please choose one of the cuisine options from the above mentioned options."
+  utter_no_results_found:
+    - "Sorry, No results found for your criteria. Would you like to search for some other restaurants?"
+ 
+actions:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_email_id_ask
+- utter_email_conf
+- utter_email_sent
+- utter_budget_error
+- utter_cuisine_error
+- utter_no_results_found
+- actions.ActionSearchRestaurants
+- actions.ActionSendEmail
+- actions.ActionCheckLocation
