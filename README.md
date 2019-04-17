@@ -1,4 +1,4 @@
-# Foodie-Chatbot
+# Foodie Chatbot
 Conversational Chatbot for Restaurant Search
 
 Chatbots have become popular in a large number of business domains. Companies are building chatbots for booking hotels, flights, movies etc., customer support, enquiring bus and train schedules, tax saving advice, accessing stock market information etc.
