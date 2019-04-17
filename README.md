@@ -35,9 +35,7 @@ Following is an example for the same:
         North Indian
         User: I’ll prefer Italian!
 
-- Average budget for two people: Segment the price range (average budget for two people) into three price categories: lesser than 300, 300 to 700 and more than 700. The bot should ask the user to select one of the three price categories. 
-
-For example:
+- Average budget for two people: Segment the price range (average budget for two people) into three price categories: lesser than 300, 300 to 700 and more than 700. The bot should ask the user to select one of the three price categories. For example:
 
         Bot: What price range are you looking at?
 
