@@ -68,6 +68,9 @@ Rasa NLU is the tool used for intent classification and entity extraction.
 
 Rasa Core, the dialogue management layer of Rasa, takes structured input in the form of intents and entities (i.e. the output of Rasa NLU) and decides the next actions.
 
+![](RestaurantChatbot_ex1.gif)
+
+
 
 
 
