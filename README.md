@@ -71,6 +71,9 @@ Rasa Core, the dialogue management layer of Rasa, takes structured input in the 
 ![](RestaurantChatbot_ex1.gif)
 
 
+![](RestaurantChatbot_ex2.gif)
+
+
 
 
 
