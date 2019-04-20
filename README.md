@@ -68,6 +68,16 @@ Rasa NLU is the tool used for intent classification and entity extraction.
 
 Rasa Core, the dialogue management layer of Rasa, takes structured input in the form of intents and entities (i.e. the output of Rasa NLU) and decides the next actions.
 
+### Chatbot Deployment
+
+Rasa provides support to implement chatbot through Slack, Facebook Messenger, Telegram and few others.
+
+We have connected Foodie Chatbot to Slack using ngrok as webhook.
+
+Ngrok is a command line application by which you can connect your chatbot to the Internet. Basically, ngrok connects your local server (on which you have built your chatbot) to a public URL securely so that you can share your bot over the internet. 
+
+We have created a new workspace and app in Slack to which Foodie Chatbot connects. Below is the demo of the Foodie ChatBot in action. Enjoy.
+
 ![](RestaurantChatbot_ex1.gif)
 
 
